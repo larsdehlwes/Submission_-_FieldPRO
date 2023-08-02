@@ -6,11 +6,11 @@ This repository contains:
 3. and the directory with the deployment files for GCP deployment ([deploy/](deploy/) directory).
 
 ## Calibration results
-First, we predicted the leakage current (in the given units) of piezo crystal as a function of the piezo crystal temperature using least squared linear regression as
+First, we predicted the leakage current (in the given units) of the piezo crystal as a function of the piezo crystal temperature using least squared linear regression as
 $$\text{hourly discharge through leakage (given units)} = 3.331^{\pm 0.026} + 0.04053^{\pm 0.00095} \cdot \frac{\theta_{\text{piezo}}}{{}^\circ C}, $$
 where the confidence interval of the parameters was chosen to be $99\\%$.
 
-Second, we could fit the actual precipitation measure by the reference weather station against the surplus of discharge. We obtained the relation
+Second, we could fit the actual precipitation measured by the reference weather station against the surplus of discharge. We obtained the relation
 $$\text{precipitation (in mm)} = \frac{\text{actual hourly discharge (given units)} - \text{hourly discharge through leakage (given units)} - 59.3^{\pm 89.2}}{37.8^{\pm 5.4}} ,$$
 where the confidence interval of the parameters was chosen to be $95\\%$.
 
@@ -37,6 +37,7 @@ Parameters:
 * air_humidity_100 (required: False)
 * air_temperature_100 (required: False)
 * atm_pressure_main (required: False)
+* num_of_resets (required: False)
 
 Example:
 https://piezoelectric-rain-gauge.rj.r.appspot.com/fieldpro?piezo_charge_decrease=150&piezo_temperature=15&air_humidity_100=82&air_temperature_100=28&atm_pressure_main=92400&num_of_resets=5
