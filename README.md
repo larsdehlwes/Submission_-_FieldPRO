@@ -47,5 +47,5 @@ Output: JSON object with the following keys:
 * precipitation (in mm)
 
 ## Observations
-* **Obviously, I had to mess up the time zones. Pretty big mistake. Will fix tomorrow. The way that I handled the analysis, however, this effectively does not change my results. For future endeavours, I certainly should fix this.** (Just fixed this now.)
+* **Obviously, I had to mess up the time zones. Pretty big mistake. Will fix tomorrow. The way that I handled the analysis, however, this effectively does not change my results. For future endeavours, I certainly should fix this.** (Just fixed this. Refer to the corresponding [issue](https://github.com/larsdehlwes/Submission_-_FieldPRO/issues/1).)
 * In favor of development speed I disregarded the minor data gaps and treated the row index as a measure of time. In production, it may be worth to handle this issue with more care. However, as there are only a few (<1%) gaps or irregularities in the data, I preferred coding speed over detail for this challenge.
