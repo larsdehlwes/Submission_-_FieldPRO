@@ -7,11 +7,11 @@ This repository contains:
 
 ## Calibration results
 First, we predicted the leakage current (in the given units) of piezo crystal as a function of the piezo crystal temperature using least squared linear regression as
-$$\text{hourly discharge through leakage (given units)} = 3.329^{\pm 0.026} + 0.04063^{\pm 0.0009} \cdot \frac{\theta_{\text{piezo}}}{{}^\circ C}, $$
+$$\text{hourly discharge through leakage (given units)} = 3.331^{\pm 0.026} + 0.04053^{\pm 0.00095} \cdot \frac{\theta_{\text{piezo}}}{{}^\circ C}, $$
 where the confidence interval of the parameters was chosen to be $99\\%$.
 
 Second, we could fit the actual precipitation measure by the reference weather station against the surplus of discharge. We obtained the relation
-$$\text{precipitation (in mm)} = \frac{\text{actual hourly discharge (given units)} - \text{hourly discharge through leakage (given units)} - 69.4^{\pm 89.4}}{37.5^{\pm 5.4}} ,$$
+$$\text{precipitation (in mm)} = \frac{\text{actual hourly discharge (given units)} - \text{hourly discharge through leakage (given units)} - 59.3^{\pm 89.2}}{37.8^{\pm 5.4}} ,$$
 where the confidence interval of the parameters was chosen to be $95\\%$.
 
 ## Deployment
@@ -47,5 +47,5 @@ Output: JSON object with the following keys:
 * precipitation (in mm)
 
 ## Observations
-* **Obviously, I had to mess up the time zones. Pretty big mistake. Will fix tomorrow. The way that I handled the analysis, however, this effectively does not change my results. For future endeavours, I certainly should fix this.**
+* **Obviously, I had to mess up the time zones. Pretty big mistake. Will fix tomorrow. The way that I handled the analysis, however, this effectively does not change my results. For future endeavours, I certainly should fix this.** (Just fixed this now.)
 * In favor of development speed I disregarded the minor data gaps and treated the row index as a measure of time. In production, it may be worth to handle this issue with more care. However, as there are only a few (<1%) gaps or irregularities in the data, I preferred coding speed over detail for this challenge.

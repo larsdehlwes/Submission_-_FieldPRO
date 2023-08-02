@@ -29,9 +29,9 @@ class PrecipitationPrediction(Resource):
         errors = schema.validate(request.args)
         if errors:
             abort(400, str(errors))
-        piezo_charge_decrease_prediction = np.exp(3.328721 + 0.040634 * float(request.args.get('piezo_temperature')))
-        piezo_charge_decrease_offset = int(request.args.get('piezo_charge_decrease')) - piezo_charge_decrease_prediction - 69.41
-        output['precipitation'] = np.max([0,piezo_charge_decrease_offset])/37.52
+        piezo_charge_decrease_prediction = np.exp(3.330953 + 0.040529 * float(request.args.get('piezo_temperature')))
+        piezo_charge_decrease_offset = int(request.args.get('piezo_charge_decrease')) - piezo_charge_decrease_prediction - 59.281349
+        output['precipitation'] = np.max([0,piezo_charge_decrease_offset])/37.795509
         output['piezo_charge_decrease_prediction'] = piezo_charge_decrease_prediction
         output['piezo_charge_decrease_offset'] = piezo_charge_decrease_offset
         return jsonify(output)
